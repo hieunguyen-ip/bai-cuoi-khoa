@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form register</title>
+    <link rel="form" href="form.css">
+    <style>
+        div {
+            border: 2px solid black;
+            outline: #140f2b solid 5px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div>
+        <form>
+            <h1>Đăng nhập</h1>
+
+            <p>The value attribute specifies an initial value for an input field:</p>
+
+            <form action="/action_page.php">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John" maxlength="16" minlength="6"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe" maxlength="16" minlength="6"><br><br>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                        maxlength="16" minlength="6">
+                    <br>
+                    <label>confirm password
+                        <input type="password" name="confirm-password" id="confirm password">
+                    </label>
+                    <br>
+                    <input type="reset">
+
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

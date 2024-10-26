@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="bot.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -85,10 +85,11 @@
                     alt="bóng đá">
             </div>
             <div class="carousel-item">
-                <img src="images/cầu lông.jpg" class="d-block w-100" alt="cầu lông">
+                <img src="images/cầu lông.jpg" class="d-block w-100" style="height: 550px;width: 100%;" alt="cầu lông">
             </div>
             <div class="carousel-item">
-                <img src="images/bóng chuyền.jpg" class="d-block w-100" alt="bóng chuyền">
+                <img src="images/bóng chuyền.jpg" class="d-block w-100" style="height: 550px;width: 100%;"
+                    alt="bóng chuyền">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -101,75 +102,322 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        <div id="wrapper">
-            <div class="headline">
-                <h3>sản phẩm bán chạy</h3>
-            </div>
-             <products>
-                <li>
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="" class="product-thumb">
-                                <img src="images/k52pro.jpg" alt="">
-                            </a>
-                            <!--//Mua ngay -->
-                        </div>
-                        <a href="" class="product-cat">Vợt Kumpoo Power control K52 pro đen</a>
-                        <a href="" class="product-name"> Hãng Kumpoo ( Nội địa trung)</a>
-                        <div class="product-price">$399.000</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="" class="product-thumb">
-                                <img src="images/vot-cau-long-yonex-arcsaber-11-pro-chinh-hang-1.webp" alt="">
-                            </a>
-                            <!--//Mua ngay -->
-                        </div>
-                        <a href="" class="product-cat">Vợt cầu lông yonex Arcsaber 11 pro</a>
-                        <a href="" class="product-name">Hãng yonex</a>
-                        <div class="product-price">$4.039.000</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="" class="product-thumb">
-                                <img src="images/vot-cau-long-yonex-duora-z-strike-xach-tay-1.webp" alt="">
-                            </a>
-                            <!--//Mua ngay -->
-                        </div>
-                        <a href="" class="product-cat">Vợt cầu lông yonex Doura Z-Strike </a>
-                        <a href="" class="product-name">Hãng yonex</a>
-                        <div class="product-price">$3.969.000</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="" class="product-thumb">
-                                <img src="images/" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="product-item"></div>
-                </li>
-                <li>
-                    <div class="product-item"></div>
-                </li>
-                <li>
-                    <div class="product-item"></div>
-                </li>
-                <li>
-                    <div class="product-item"></div>
-                </li>
-            </products>
-        </div>
+
 
     </div>
+    <div id="wrapper">
+        <div class="headline">
+            <h3>sản phẩm bán chạy</h3>
+        </div>
+        <div class="products">
+            <div class="card" style="width: 18rem;">
+                <img src="images/áo đá bóng 3.webp" class="card-img-top" alt="Áo đá bóng">
+                <div class="card-body">
+                    <h5 class="card-title">Mẫu đồ đá banh Đội tuyển Bóng đá Quốc gia Argentina 2022 màu xanh ngọc tự
+                        thiết kế V3022</h5>
+                    <p class="card-text">ÁO Bóng đá thiết kế riêng biệt đáp ứng mọi yêu cầu của khách hàng.
+                        Quần áo thể thao với phong cách trẻ trung năng động, mát mẻ, thoát khí, giúp người chơi thoải
+                        mái vẫn động
+                    </p>
+                    <a href="/products/ao_da_bong.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/vot-cau-long-yonex-arcsaber-11-pro-chinh-hang-1.webp" class="card-img-top"
+                    alt="vợt cầu lông">
+                <div class="card-body">
+                    <h5 class="card-title">Vợt cầu lông yonex Arcsaber 11 pro</h5>
+                    <p class="card-text">- Vợt cầu lông Yonex Arcsaber 11 Pro được nhà Yonex phát hành với 2 phiên bản
+                        3U và 4U cùng phối màu Grayish Pearl (Ngọc
+                        Trai Xám) được sơn nhám trên tổng thể vợt cho cái nhìn hiện đại và cứng cáp chắc chắn sẽ làm các
+                        lông thủ cực ưng ý ngay
+                        từ lần chạm mặt đầu tiên.</p>
+                    <a href="products/vot_cau_long11.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/vot-cau-long-yonex-duora-z-strike-xach-tay-1.webp" class="card-img-top"
+                    alt="vợt cầu lông">
+                <div class="card-body">
+                    <h5 class="card-title">Vợt cầu lông yonex Doura Z-Strike </h5>
+                    <p class="card-text">- Yonex Duora Z-Strike nổi trội là một trong những cây vợt thành công nhất của
+                        nhà Yonex cho lối chơi toàn diện, chớp
+                        thời cơ tấn công nhanh chớp nhoáng khiến đối thủ sân bạn không kịp trở tay.</p>
+                    <a href="products/vot_cau_long_dura.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/ao-cau-long1.webp" class="card-img-top" alt="áo cầu lông">
+                <div class="card-body">
+                    <h5 class="card-title">Áo cầu lông Yonex 315 nam - Trắng hồng </h5>
+                    <p class="card-text">- Nếu lông thủ nào chưa biết nhiều về áo cầu lông thì sản phẩm là mẫu áo chuyển
+                        nhiệt tức là in nhiệt hẳn hoàn toàn màu
+                        sắc và thiết kế lên trên chiếc áo trơn. Giúp thấm hút mồ hôi tốt đặc biệt giá thành siêu rẻ</p>
+                    <a href="products/ao_cau_longnam.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/ao-cau-long-2.webp" class="card-img-top" alt="áo cầu lông">
+                <div class="card-body">
+                    <h5 class="card-title">Áo cầu lông Nữ Yonex VM1057 nữ-Trắng chính hãng </h5>
+                    <p class="card-text">Áo cầu lông Nữ Yonex 20635-1 chính hãng áp dụng công nghệ VERYCOOL DRY sản xuất
+                        quần áo làm tăng giá trị trang phục hơn
+                        bạn tưởng tượng. Sức nóng có thể khiến bạn chậm lại, và mồ hôi có thể giữ chân bạn. Công nghệ
+                        VERYCOOL được áp dụng trên
+                        Áo cầu lông Yonex chính hãng hấp thu nhiệt và mồ hôi để tạo ra hiệu ứng làm mát – giảm đi 3 độ C
+                        trên cơ thể. sợi vãi
+                        nhanh khô hơn với chất liệu Xylitol. Luôn giữ cơ thể mát mẻ, dù là vào những thời điểm thời tiết
+                        nóng nhất trong suốt
+                        trận đấu.</p>
+                    <a href="/products/ao_cau_longnu.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/giay-cau-long-1.jpg" class="card-img-top" alt="giày cầu lông">
+                <div class="card-body">
+                    <h5 class="card-title">Giày cầu lông Yonex SHB 65Z3 Wide – Trắng cam new 2023</h5>
+                    <p class="card-text">một trong bộ tứ siêu phẩm 65Z3 của nhà Yonex với thiết kế form rộng giúp chân
+                        các bạn được thoải mái khi sử dụng giày để
+                        di chuyển với nhịp độ cao trong thời gian dài. Được trang bị công nghệ Power Cushion + giúp hấp
+                        thụ lực sau những cú
+                        nhày đập chống được những chấn thương nguy hiểm. Phần trên giảm thiểu sự chồng chéo vật liệu và
+                        mở rộng vùng liền mạch
+                        để loại bỏ ứng suất trong quá trình uốn và đạt được độ vừa vặn mềm mại. Ngoài ra, “lớp vỏ bên”
+                        kéo dài đến chân sau của
+                        giày vừa mang lại sự chắc chắn vừa mang lại cảm giác thoải mái mềm mại. Những đôi giày cầu lông
+                        tạo ra động tác chân
+                        nhanh nhẹn bằng cách cải thiện độ vừa vặn và độ chắc chắn mềm mại ngoài khả năng hấp thụ va chạm
+                        và khả năng đàn hồi
+                        tuyệt vời. Với 2 phiên bản màu sắc nổi bật và trẻ trung: trắng cam và xanh navy, người chơi có
+                        thể thể hiện được cá tính
+                        năng động của bản thân, tạo nên sự nổi bật cho từng bước di chuyển trên sân cầu.</p>
+                    <a href="products/giay65z3.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/giày bóng đá 1.jpg" class="card-img-top" alt="giày bóng đá">
+                <div class="card-body">
+                    <h5 class="card-title">LSYAAAAA</h5>
+                    <p class="card-text">Thiết kế đẹp mắt là mẫu giày cổ cao. Đi êm chân tạo cảm giác thoải mái cho
+                        người sử dụng.
+                        Đặc biêt thiết kế nhỏ gọn.</p>
+                    <a href="/products/giay_bong_dalsyaa.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/giày chạy.webp" class="card-img-top" alt="chạy bộ">
+                <div class="card-body">
+                    <h5 class="card-title">Giày chạy bộ Saucony Endorphin Speed 4 </h5>
+                    <p class="card-text">Saucony Endorphin Speed 4 cùng với Saucony Endorphin Pro 4 là dòng giày
+                        chạy tốc độ mới nhất của Saucony. Điểm nổi bật
+                        của giày là đệm PWRRUN PB siêu nảy, tấm nylon hỗ trợ chuyển động linh hoạt, công nghệ
+                        SPEEDROLL giúp bạn bứt tốc dễ
+                        dàng. Saucony Endorphin Speed 4 có trọng lượng chỉ 233g (size 43), lớp vải upper mesh
+                        mịn và thoáng, là lựa chọn hoàn
+                        hảo cho những người chạy đam mê tốc độ, dù là luyện tập hằng ngày hay cho ngày chạy đua.
+                        content.</p>
+                    <a href="/products/giay_chay_bosaucony.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/áo bóng đá1.jpg" class="card-img-top" alt="áo bóng đá">
+                <div class="card-body">
+                    <h5 class="card-title">Quần Áo đội tuyển Đức màu xanh mè </h5>
+                    <p class="card-text">Đội tuyển nước Đức là một đội mạnh nhưng đội bóng chọn đội tuyển
+                        với sức mạnh đội bóng</p>
+                    <a href="products/ao_doi_tuyenduc.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/áo bóng 2.jpg" class="card-img-top" alt="Áo bóng đá">
+                <div class="card-body">
+                    <h5 class="card-title">Đồ Đá Banh Áo Bóng Đá Không Logo Ronaldo Tím</h5>
+                    <p class="card-text">Đồ Đá Banh Áo Bóng Đá Không Logo Ronaldo Tím 2023 Xuất Sắc là một
+                        mẫu áo đá banh không logo tự thiết kế tại Xưởng may
+                        Rozaco. Áo được lấy gam màu tím làm gam màu chính, các họa tiết loang xám đi kèm từ
+                        thân trước đến thân sau tạo một hiệu
+                        ứng ma mị và hiện đại.</p>
+                    <a href="products/ao-cr7.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/k52pro.jpg" class="card-img-top" alt="vợt cầu lông">
+                <div class="card-body">
+                    <h5 class="card-title">Vợt Cầu Lông Kumpoo Power Control K520 Pro</h5>
+                    <p class="card-text">nhà Kumpoo quyết định cho ra mắt tiếp siêu phẩm vợt cầu lông Kumpoo
+                        Power Control K520 Pro Nội địa trung hướng đến đối
+                        tượng là người chơi phong trào yêu thích khả năng công thủ linh hoạt.
+
+                        Vợt cầu lông Kumpoo Power Control K520 Pro thuộc dòng vợt cầu lông giá rẻ với thông
+                        số dễ chơi và dễ điều khiển trong
+                        khoảng thời gian ngắn, đem đến cho người chơi khả năng xử lý cầu nhanh linh hoạt kết
+                        hợp các pha đập cầu tấn công chớp
+                        nhoáng khiến đối phương bất ngờ.</p>
+                    <a href="products/vot_cumpo.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/giày bóng đá 2.jpg" class="card-img-top" alt="giày bóng đá">
+                <div class="card-body">
+                    <h5 class="card-title">Giày Bóng Đá Beyono Tornado – White</h5>
+                    <p class="card-text">Giày bóng đá chuyên dụng của Beyono Việt Nam đã nhận được rất nhiều
+                        sự quan tâm, ủng hộ của đông đảo khách hàng trong
+                        thời gian qua. Thương hiệu thể thao thuần Việt đầu tiên tại nước ta – Beyono đã gây
+                        tiếng vang lớn, thành công chinh
+                        phục cả những khách hàng khó tính nhất bằng các sản phẩm chuyên dụng – chất lượng và
+                        khác biệt.</p>
+                    <a href="products/giay_tornado.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/đồ bóng chuyền.jpg" class="card-img-top" alt="đồ bóng chuyền">
+                <div class="card-body">
+                    <h5 class="card-title">Bộ Bóng Chuyền Nam Vol 3 Full 5 Màu Cực Đỉnh</h5>
+                    <p class="card-text">SPhá cách, mới lạ sẵn sàng ra sân thi đấu cùng bộ bóng chuyền nam
+                        Vol 3 tại KiwiSport nào. Mẫu mới nhất 2023 với full 5
+                        màu cực đẹp, thiết kế tinh tế, phối màu trẻ trung dồi dào năng lượng.</p>
+                    <a href="products/do_bong_chuyen.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/đồ chạy bộ.jpg" class="card-img-top" alt="đồ chạy bộ">
+                <div class="card-body">
+                    <h5 class="card-title">Bộ Quần Áo Chạy Bộ Thể Thao Chạy Bộ Chuyên Nghiệp Cho Nam Và Nữ
+                    </h5>
+                    <p class="card-text">thông tháng phù hợp với các cuộc chạy maraton ngắn dài, chạy chuyên
+                        nghiệp hay chạy thể dục. Với nhiều ưu điểm : làm khô nhanh, hút ẩm, thoáng khí
+
+                    </p>
+                    <a href="products/do_chạy_bo.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/giày bóng chuyền.webp" class="card-img-top" alt="giày bóng chuyền">
+                <div class="card-body">
+                    <h5 class="card-title">Giày Bóng chuyền nam nữ giá rẻ Beyono Warrior - Young - chính hãng</h5>
+                    <p class="card-text">Giày bóng chuyền cày sân bê tông Beyono chính thức ra mắt dòng sản phẩm mới -
+                        giày thể thao chuyên dụng dành cho tín đồ
+                        yêu bóng chuyền. Lấy cảm hứng từ hình tượng chiến binh bất bại, dũng mãnh với những bước chạy
+                        năng động, Beyono tâm
+                        huyết giới thiệu dòng giày mới với bộ sưu tập mang tên WARRIOR, được ra mắt chính thức từ hôm
+                        nay.</p>
+                    <a href="products/giay_bong_chuyen.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/dép chạy bộ.png" class="card-img-top" alt="dép chạy bộ">
+                <div class="card-body">
+                    <h5 class="card-title">Dép chạy bộ Ysandal Heel Cover</h5>
+                    <p class="card-text">Thiết kế kiểu dáng trẻ trung, hiện đại.
+
+                        Chất liệu cấu tạo cao cấp mang lại cảm giác thoải mái khi sử dụng.
+
+                        Đế dép thiết kế dạng tổ ong giúp bám đất tốt hơn, tăng khả năng chống trượt.
+
+                        Phần hỗ trợ gót giữ chặt chân, hỗ trợ chân khi chuyển bước.
+
+                        Chạy được trên nhiều địa hình chạy và loại đường khác nhau</p>
+                    <a href="products/dep_chay_bo.html" class="btn btn-primary">Mua Ngay</a>
+                </div>
+            </div>
+            <!-- <li>
+
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/áo đá bóng 3.webp" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+
+                    </div>
+                    <a href="" class="product-cat">Áo thiết kế riêng</a>
+                    <a href="" class="product-name">hãng sport ca</a>
+                    <div class="product-price">$299.000</div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/vot-cau-long-yonex-arcsaber-11-pro-chinh-hang-1.webp" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+                    </div>
+                    <a href="" class="product-cat">Vợt cầu lông yonex Arcsaber 11 pro</a>
+                    <a href="" class="product-name">Thương hiệu yonex</a>
+                    <div class="product-price">$4.039.000</div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/vot-cau-long-yonex-duora-z-strike-xach-tay-1.webp" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+                    </div>
+                    <a href="" class="product-cat">Vợt cầu lông yonex Doura Z-Strike </a>
+                    <a href="" class="product-name">Thương hiệu yonex</a>
+                    <div class="product-price">$3.969.000</div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/ao-cau-long1.webp" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+                    </div>
+                    <a href="" class="product-cat">Áo cầu lông Yonex 315 nam - Trắng hồng</a>
+                    <a href="" class="product-name">Thương hiệu Yonex</a>
+                    <div class="product-price">$160.000</div>
+                </div>
+            </li>
+            <li>
+             
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/giay-cau-long-1.jpg" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+                    </div>
+                    <a href="" class="product-cat">Giày cầu lông Yonex SHB 65Z3 Wide – Trắng cam new 2023</a>
+                    <a href="" class="product-name"> THương hiệu jonex</a>
+                    <div class="product-price">$2.600.000</div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/giày bóng đá 1.jpg" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+                    </div>
+                    <a href="" class="product-cat">LSYAAAAA</a>
+                    <a href="" class="product-name"> hãng OME</a>
+                    <div class="product-price">$800.000</div>
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="images/giày chạy.webp" alt="">
+                        </a>
+                        <a href="" class="buy-now">Mua Ngay</a>
+                    </div>
+                    <a href="" class="product-cat">Giày chạy bộ Saucony Endorphin Speed 4</a>
+                    <a href="" class="product-name">Hãng saucony</a>
+                    <div class="product-price">$4.390.000</div>
+                </div>
+            </li> -->
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -180,5 +428,79 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 </body>
+<footer class="footer">
+    <div class="giv">
+        <div class="giv-row">
+            <div class="giv_column-2-4">
+                <h3 class="footer_header">Chăm Sóc Khách Hàng</h3>
+                <ul class="footer-ul">
+                    <li class="footer-il">
+                        <a href="" class="licon">Trung Tâm Trợ Giúp</a>
+                    </li>
+                    <li class="footer-il">
+                        <a href="" class="licon">F8-shop mall</a>
+                    </li>
+                    <li class="footer-li">
+                        <a href="" class="licon">Hướng Dẫn Mua Hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="giv_column-2-4">
+                <h3 class="footer_header">Giới Thiệu</h3>
+                <ul class="footer-ul">
+                    <li class="footer-il">
+                        <a href="" class="licon">Giới Thiệu</a>
+                    </li>
+                    <li class="footer-li">
+                        <a href="" class="icon">Tuyển Dụng</a>
+                    </li>
+                    <li class="footer-li">
+                        <a href="" class="licon">Điều Khoản
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="giv_column-2-4">
+                <h3 class="footer_header">Chính Sách</h3>
+                <p>Chính sách
+                    Chính sách đổi trả,hoàn tiền <br>
+                    Chính sách bảo hành <br>
+                    Chính sách xử lý khiếu nại <br>
+                    Chính sách vận chuyển <br>
+                    Điều khoản sử dụng <br>
+                    Chính Sách Bảo Mật Thông Tin <br>
+                    Chính sách nhượng quyền</p>
+            </div>
+            <div class="giv_column-2-4">
+                <h3 class="footer_header">Theo dõi</h3>
+                <ul class="footer-ul">
+                    <li class="footer-il">
+                        <a href="" class="licon">
+                            <i class="fa-brands fa-facebook"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="footer-li">
+                        <a href="" class="licon">
+                            <i class="fa-brands fa-instagram"></i>
+                            Instagram
+                        </a>
+                    </li>
+                    <li class="footer-li">
+                        <a href="" class="licon">
+                            <i class="fa-brands fa-tiktok"></i>
+                            Tik Tok
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+
+            </div>
+
+        </div>
+</footer>
 
 </html>
