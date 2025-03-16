@@ -188,3 +188,9 @@ ul.products li .product-info a.product-price {
     flex-direction: column; /* Stack columns on smaller screens */
   }
 }
+#activities{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: 50px;
+}
