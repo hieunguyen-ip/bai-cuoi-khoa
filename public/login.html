@@ -9,24 +9,79 @@
     <link rel="stylesheet" href="login.css" />
    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
+        .container {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+    
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
    
     <div class="login">
-        <div class="login__container">
-            <h1>Đăng Kí</h1>
-            <form>
-                <h5>Email</h5>
-                <input id="email" type="text" class="input-login-username" />
-                <h5>Password</h5>
-                <input id="password" type="password" class="input-login-password" />
-                <h5>Confirm Password</h5>
-                <input id="confirmPassword " type="password" class="input-login-password" />
-                <button type="submit" class="login__signInButton">Đăng Kí</button>
-            </form>
-            <a href="/signin.html" class="accountButton">Đăng nhập nếu bạn đã có tài khoản!</a>
+        <h2>Đăng kí</h2>
+        <form id="profileForm">
+            <input type="text" id="name" placeholder="Họ và tên" required><br><br>
+            <input type="email" id="email" placeholder="Email" required><br><br>
+            <input type="tel" id="phone" placeholder="Số điện thoại" required><br><br>
+            <button type="submit">Lưu hồ sơ</button>
+        </form>
+        
+        <h3>nick đăng nhập</h3>
+        <div id="profileDisplay"></div>
         </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("profileForm");
+                const display = document.getElementById("profileDisplay");
+
+                function saveProfile(e) {
+                    e.preventDefault();
+                    const profile = {
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        phone: document.getElementById("phone").value,
+                        address: document.getElementById("address").value,
+                        avatar: document.getElementById("avatar").value
+                    };
+                    localStorage.setItem("userProfile", JSON.stringify(profile));
+                    displayProfile();
+                }
+
+                function displayProfile() {
+                    const data = JSON.parse(localStorage.getItem("userProfile"));
+                    if (data) {
+                        display.innerHTML = `
+                            <img src="${data.avatar || 'https://via.placeholder.com/100'}" alt="Avatar">
+                            <p><strong>Họ tên:</strong> ${data.name}</p>
+                            <p><strong>Email:</strong> ${data.email}</p>
+                            <p><strong>Điện thoại:</strong> ${data.phone}</p>
+                        `;
+                    }
+                }
+
+                form.addEventListener("submit", saveProfile);
+                displayProfile();
+            });
+        </script>
+        <div><a href="/form.html">
+        </i>Đăng nhập nếu bạn đã có tài khoản!</a>
+        </div>
+       
     </div>
 </body>
 
