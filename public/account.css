@@ -1,69 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 body {
-  background-image: url("/public/images/sport.jpg");
-  background-size: 300px;
-  background-position-y: -100px;
-  font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-image:url(/public/images/sport.jpg) ;
 }
-
-#wrapper {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#form-login {
-  max-width: 400px;
-  background: 0;
-  flex-grow: 1;
-  padding: 30px 40px 30px;
-  box-shadow: 0px 0px 17px 2px rgba(251, 250, 250, 0.8);
-}
-
-.form-heading {
-  font-size: 25px;
-  color: rgb(149, 149, 20);
+.login-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 30px;
+  width: 300px;
 }
+.login-container h2 {
+  margin-bottom:20px ;
+  color: #333;
 
-.form-input {
-  background: transparent;
-  border: 0px;
-  outline: 0px;
-  color: aliceblue;
-  flex-grow: 1;
 }
-
-.form-group {
-  border-bottom: 1px solid #fff;
-  margin-top: 15px;
-  margin-bottom: 20px;
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
-
-.form-group::placeholder {
-  color: black;
+.input-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
-
-.form-submit {
-  background: transparent;
-  border: 1px solid #fff;
+.input-group input {
   width: 100%;
-  text-transform: uppercase;
-  padding: 6px 10px;
-  transition: 0.25s ease-in-out;
-  margin-top: 30px;
+  padding: 10px;
+  border:  1px solid #ccc;
+  border-radius: 5px;
 }
-
-.form-submit :hover {
-  border: 1px solid #594b76;
+.remeber-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
 }
-
-.form-group i {
-  color: #fff;
-  font-size: 14px;
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #0072ff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor:  pointer;
+  transition: 0.3s;
 }
-
-#eye i {
-  padding-right: 0;
+.login-btn:hover {
+  background: #07090a;
+  
+}
+#message {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+.register-btn {
+  background-color: white;
+  text-align: center;
+}
+.register-btn:hover {
+  background-color: aquamarine;
+}
+h2 {
+  background-color: white;
+  text-align: center;
 }
