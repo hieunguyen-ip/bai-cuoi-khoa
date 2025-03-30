@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.pro {
+    display: flex;
+    gap: 20px;
+}
+
+.pros {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#cart {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}

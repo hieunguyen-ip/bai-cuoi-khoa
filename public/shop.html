@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+    <h1>Danh sách sản phẩm</h1>
+    <div class="pro">
+        <div class="pros">
+            <h3>Sản Phẩm</h3>
+            <p>Giá: <span class="price">100000</span>VND</p>
+            <button onclick="addToCart('Sản phẩm 1' , 100000)">Thêm Vào Giỏ</button>
+            <div class="pros">
+                <h3>Sản phẩm 2</h3>
+                <p>Giá: <span class="price">150000</span> VND</p>
+                <button onclick="addToCart('Sản phẩm 2', 150000)">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+    <h2>Giỏ hàng</h2>
+    <div id="cart">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <p><strong>Tổng tiền: <span id="total-price">0</span> VND</strong></p>
+    </div>
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            let existingProduct = cart.find(item => item.name === name);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartTable = document.getElementById("cart-items");
+            let totalPrice = 0;
+            cartTable.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                totalPrice += item.price * item.quantity;
+
+                let row = `<tr>
+            <td>${item.name}</td>
+            <td>${item.price} VND</td>
+            <td>
+                <button onclick="changeQuantity(${index}, -1)">-</button>
+                ${item.quantity}
+                <button onclick="changeQuantity(${index}, 1)">+</button>
+            </td>
+            <td><button onclick="removeFromCart(${index})">Xóa</button></td>
+        </tr>`;
+                cartTable.innerHTML += row;
+            });
+
+            document.getElementById("total-price").innerText = totalPrice;
+        }
+
+        function changeQuantity(index, amount) {
+            if (cart[index].quantity + amount > 0) {
+                cart[index].quantity += amount;
+            } else {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+    </script>
+</body>
+
+</html>
