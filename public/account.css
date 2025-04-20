@@ -29,6 +29,7 @@ body {
 .input-group {
   margin-bottom: 15px;
   text-align: left;
+  color: #ffffff;
 }
 .input-group label {
   font-weight: bold;
@@ -67,145 +68,86 @@ body {
   color: red;
   font-weight: bold;
 }
-.register-btn {
-  background-color: white;
-  text-align: center;
-}
-.register-btn:hover {
-  background-color: aquamarine;
-}
-h2 {
-  background-color: white;
-  text-align: center;
-} 
-
-header {
-  background: #111;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.logo span {
-  display: block;
-  font-size: 12px;
-  color: #999;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* style.css */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
-.icons {
+body {
+  background: url();
+  background-size: cover;
+  height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
 }
 
-.count {
-  background: red;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 50%;
-  font-size: 10px;
-  vertical-align: top;
-  margin-left: 2px;
+.login-toto {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero {
-  background: url(/public/images/sport.jpg);
-  color: white;
-  padding: 80px 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
-.hero-content img {
-  width: 300px;
+.login-formss {
+  position: relative;
+  z-index: 1;
 }
 
-.hero .text h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.hero .text p {
+input {
+  width: 100%;
+  padding: 10px;
   margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.hero button {
-  padding: 12px 24px;
-  background: #e91e63;
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
 }
 
-.categories {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 20px;
-  background: #fff;
+button:hover {
+  background-color: #0056b3;
 }
 
-.category {
+#messagess {
   text-align: center;
-  max-width: 250px;
-}
-
-.category img {
-  width: 120px;
-  height: auto;
-}
-
-.category h3 {
-  margin-top: 15px;
-}
-
-.category button {
-  padding: 10px 20px;
-  background: #111;
-  color: white;
-  border: none;
   margin-top: 10px;
-  cursor: pointer;
+  font-size: 14px;
 }
 
-.category button.highlight {
-  background: #e91e63;
+#message.success {
+  color: green;
 }
 
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-footer button {
-  background: #e91e63;
-  color: white;
-  padding: 6px 12px;
-  border: none;
-  cursor: pointer;
+#message.error {
+  color: red;
 }

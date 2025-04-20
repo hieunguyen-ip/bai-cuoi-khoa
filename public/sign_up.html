@@ -1,80 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng kí</title>
-    <link rel="stylesheet" href="account.css" />
-   
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="register-container">
-        <h2>Đăng Ký</h2>
-        <form id="registerForm">
-            <div class="input-group">
-                <label for="fullname">Họ và Tên:</label>
-                <input type="text" id="fullname" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Mật khẩu:</label>
-                <input type="password" id="password" required>
-            </div>
-            <div class="input-group">
-                <label for="confirmPassword">Xác nhận mật khẩu:</label>
-                <input type="password" id="confirmPassword" required>
-            </div>
-            <button type="submit" class="register-btn">Đăng Ký</button>
-        </form>
-        <p id="message">Có tài khoản thì -> <a href="sign_in.html">Đăng nhập</a></p>
+    <div class="login-toto">
+        <div class="overlay"></div>
+        <div class="login-formss">
+            <h2>Đăng Ký</h2>
+            <form id="registerFormss">
+                <input type="text" id="fullname" placeholder="Họ và tên" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Mật khẩu" required>
+                <input type="password" id="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+                <button type="submit">Đăng Ký</button>
+            </form>
+            <p id="messagess"></p>
+            <p style="text-align: center; margin-top: 10px;">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+        </div>
     </div>
-          <script>
+    <script src="register.js">
+     
             document.getElementById("registerForm").addEventListener("submit", function (event) {
-                    event.preventDefault(); 
+                event.preventDefault();
 
-                    let fullname = document.getElementById("fullname").value;
-                    let email = document.getElementById("email").value;
-                    let password = document.getElementById("password").value;
-                    let confirmPassword = document.getElementById("confirmPassword").value;
-                    let message = document.getElementById("message");
+                const fullname = document.getElementById("fullname").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+                const message = document.getElementById("message");
 
-                    
-                    if (password !== confirmPassword) {
-                        message.innerText = "Mật khẩu không khớp!";
-                        message.style.color = "red";
-                        return;
-                    }
+                message.textContent = "";
+                message.className = "";
 
-                  
-                    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailPattern.test(email)) {
-                        message.innerText = "Email không hợp lệ!";
-                        message.style.color = "red";
-                        return;
-                    }
+          
+                if (password !== confirmPassword) {
+                    message.textContent = "❌ Mật khẩu xác nhận không khớp.";
+                    message.className = "error";
+                    return;
+                }
 
-                  
-                    message.innerText = "Đăng ký thành công!";
-                    message.style.color = "green";
+                const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+                if (!passwordRegex.test(password)) {
+                    message.textContent = "❌ Mật khẩu phải ít nhất 8 ký tự, có chữ hoa, số và ký tự đặc biệt.";
+                    message.className = "error";
+                    return;
+                }
 
-                    
-                    localStorage.setItem("registeredUser", JSON.stringify({ fullname, email, password }));
+       
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    message.textContent = "❌ Email không hợp lệ.";
+                    message.className = "error";
+                    return;
+                }
 
-                    
-                    setTimeout(() => {
-                        window.location.href = "login.html";
-                    }, 1000);
-                });
+         
+                let users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+                if (users.find(user => user.email === email)) {
+                    message.textContent = "❌ Email này đã được đăng ký.";
+                    message.className = "error";
+                    return;
+                }
 
-        </script>    
-    
+            
+                users.push({ fullname, email, password });
+                localStorage.setItem("registeredUsers", JSON.stringify(users));
+
+                message.textContent = "✅ Đăng ký thành công!";
+                message.className = "success";
+
+             
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, 1500);
+            });
+
+    </script>
 </body>
 
 </html>
