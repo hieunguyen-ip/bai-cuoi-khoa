@@ -9,7 +9,9 @@ body {
    justify-content: center;
    align-items: center;
    height: 100vh;
-   background-image:url(/public/images/sport.jpg) ;
+   background-image:url(/public/images/sport.jpg)  ;
+   background-repeat: no-repeat;
+    background-size: cover;
 }
 .login-container {
   background: white;
@@ -76,11 +78,6 @@ h2 {
   background-color: white;
   text-align: center;
 } 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
-}
 
 header {
   background: #111;
