@@ -1,214 +1,68 @@
 <!DOCTYPE html>
-<html lang="vi" class="h-100">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Quần áo bóng chuyền Riki Vol3</title>
-    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/product-detail.css" type="text/css">
-    <link rel="stylesheet" href="stylecon.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mẫu Đồ bóng chuyền</title>
+    <link rel="stylesheet" href="/public/products.css">
 </head>
 
 <body>
-    
-    <!-- <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="https://shopvnb.com/ao-cau-long-yonex-315-nam-trang-hong.html">Áo cầu lông
-                yonex 315 nam</a>
-            <div class="navbar-collapse collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">Trang chủ <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://shopvnb.com/ao-cau-long-yonex-315-nam-trang-hong.html">Quản
-                            trị</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Sản phẩm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Giới thiệu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Liên hệ</a>
-                    </li>
-                </ul> -->
-    <form class="form-inline mt-2 mt-md-0" method="get" action="search.html">
-        <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm" aria-label="Search"
-            name="keyword_tensanpham">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
-    </form>
-    </div>
-    <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" href="cart.html">Giỏ hàng</a>
-        </li>
-        <li class="nav-item text-nowrap">
-
-            <a class="nav-link" href="../login.html"></i>Đăng nhập</a>
-        </li>
-    </ul>
-    </div>
-    </nav>
-
-
-    <main role="main">
-
-        <div class="container mt-4">
-            <div id="thongbao" class="alert alert-danger d-none face" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-
-            <div class="card">
-                <div class="container-fliud">
-                    <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post"
-                        action="/php/twig/frontend/giohang/themvaogiohang">
-                        <input type="hidden" name="sp_ma" id="sp_ma" value="5">
-                        <input type="hidden" name="sp_ten" id="sp_ten" value="Samsung Galaxy Tab 10.1 3G 16G">
-                        <input type="hidden" name="sp_gia" id="sp_gia" value="10990000.00">
-                        <input type="hidden" name="hinhdaidien" id="hinhdaidien" value="samsung-galaxy-tab-10.jpg">
-
-                        <div class="wrapper row">
-                            <div class="preview col-md-6">
-                                <div class="preview-pic tab-content">
-                                    <div class="tab-pane" id="pic-1">
-                                        <img src="../images/đồ bóng chuyền.jpg" alt="ao-cau-long1">">
-                                    </div>
-                                    <div class="tab-pane" id="pic-2">
-                                        <img
-                                            src="../images/chuyen1.webp">
-                                    </div>
-                                    <div class="tab-pane active" id="pic-3">
-                                        <img
-                                            src="../images/chuyen2.webp">
-                                    </div>
-                                </div>
-                                <ul class="preview-thumbnail nav nav-tabs">
-                                    <li class="active">
-                                        <a data-target="#pic-1" data-toggle="tab" class="">
-                                            <img
-                                                src="../images/chuyen3.webp">
-                                        </a>
-                                    </li>
-                                    <li class="active-1">
-                                        <a data-target="#pic-2" data-toggle="tab" class="">
-                                            <img
-                                                src="/images/chuyen4.webp">
-                                        </a>
-                                    </li>
-                                    <!-- <li class="active-2">
-                                        <a data-target="#pic-3" data-toggle="tab" class="active">
-                                            <img
-                                                src="data:image/jpeg;base64,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">
-                                        </a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                            <div class="details col-md-6">
-                                <h3 class="product-title">Quần áo bóng chuyền Riki Vol3</h3>
-                                <div class="rating">
-                                    <div class="stars">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                    <span class="review-no">999 reviews</span>
-                                </div>
-                                <p class="product-description">Khuyến mãi ƯU ĐÃI
-                                ✔ Thanh toán sau khi kiểm tra và nhận hàng
-                                ✔ Hỗ trợ đổi size <br>
-
-                                #quanaothethao#quanaobongchuyen#bodothethao#bodobongchuyen</p>
-                                <small class="text-muted">Giá cũ: <s><span>145,000 vnđ</span></s></small>
-                                <h4 class="price">Giá hiện tại: <span>123,250 vnđ</span></h4>
-                                <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo
-                                    <strong>Uy
-                                        tín</strong>!
-                                </p>
-                                <h5 class="sizes">sizes:
-                                    <span class="size" data-toggle="tooltip" title="cỡ Nhỏ">s</span>
-                                    <span class="size" data-toggle="tooltip" title="cỡ Trung bình">m</span>
-                                    <span class="size" data-toggle="tooltip" title="cỡ Lớn">l</span>
-                                    <span class="size" data-toggle="tooltip" title="cỡ Đại">xl</span>
-                                </h5>
-                                <h5 class="colors">colors:
-                                    <span class="color orange not-available" data-toggle="tooltip"
-                                        title="Hết hàng"></span>
-                                    <span class="color green"></span>
-                                    <span class="color blue"></span>
-                                </h5>
-                                <div class="form-group">
-                                    <label for="soluong">Số lượng đặt mua:</label>
-                                    <input type="number" class="form-control" id="soluong" name="soluong" min="0"
-                                        max="100">
-                                </div>
-                                <div class="action">
-                                    <a class="add-to-cart btn btn-default" id="btnThemVaoGioHang">Thêm vào giỏ
-                                        hàng</a>
-                                    <a class="like btn btn-default" href="#"><span class="fa fa-heart"></span></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="container-fluid">
-                    <h3>Thông tin chi tiết về Sản phẩm</h3>
-                    <span>liên hệ zalo: 0338867183</span>
-                    <p>Quần áo bóng chuyền Riki Vol3 có những đặc điểm nổi bật như sau:
-                    – Phá cách, mới lạ điểm nhấn là tay áo được phối màu hòa quyện với màu quần, tạo điểm nhấn khác biệt nhưng đồng điệu cho
-                    BST.
-                    – Phần sườn áo bên phải được nhấn mạnh với màu sắc riêng và dòng chữ Riki chạy dọc theo sườn áo, vừa khác biệt, vừa tinh
-                    tế.
-                    – From dáng phù hợp với người Việt.
-                    – Chất vải : Fabric R-Cro chuyên dụng, có độ bền cao và khả năng thoáng khí tốt, kháng khuẩn, co giãn đa chiều giúp bạn
-                    thoải mái vận động với cường độ cao.
-                    – BST Vol3 không chỉ theo xu hướng thời trang mà còn mang dấu ấn nổi bật với tone màu tươi sáng và bắt mắt.
-                    – BST Vol3: đa dạng với nhiều tone màu: Trắng xám – Trắng cổ vịt – Xanh đen – Đỏ – Ngọc
-                    – Với 4 Size người lớn: M – L – XL – XXL (145.000Vnđ)
-                    <br>
-                    Hướng dẫn chọn size bộ quần áo bóng chuyền Riki Vol3:
-                    ● Size S: từ 45->53kg, chiều cao từ 150->160 cm
-                    ● Size M: từ 53->60kg, chiều cao từ 160->168 cm
-                    ● Size L: từ 60->70kg, chiều cao từ 165->170 cm
-                    ● Size XL: từ 70->80kg, chiều cao từ 170->180 cm
-                    ● Size XXL: từ 80->88kg, chiều cao từ 175cm trở lên
-                    #quanaothethao#quanaobongchuyen#bodothethao#bodobongchuyen</p>
-                    <div class="row">
-                        <div class="col">
-                            <link rel="stylesheet" href="https://shopvnb.com/ao-cau-long-yonex-315-nam-trang-hong.html">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <header>
+        <div class="logo">SportZone <span>Football Gear</span></div>
+        <nav>
+            <ul>
+                <li><a href="/public/index.html">Home</a></li>
+                <li><a href="/public/shop.html">Shop</a></li>
+                <li><a href="#"> Áo thể thao</a></li>
+                <li><a href="#">Giày thể thao</a></li>
+                <li><a href="#">Phụ Kiện thể thao</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <i class="user">👤</i>
+            <i class="cart">🛒<span class="count">0</span></i>
         </div>
+    </header>
 
+    <section class="hero">
+        <div class="hero-content">
+            <div class="text">
+                <h2>Đồ bóng chuyền</h2>
+                <h1>Tiếp Lửa Đam Mê</h1>
+                <button>Shop Now</button>
+            </div>
+            <img src="/public/images/đồ bóng chuyền.jpg" alt="áo" />
+        </div>
+    </section>
 
+    <section class="categories">
+        <div class="category">
+            <img src="/public/images/z3.jpg" alt="Jersey" />
+            <h3>Giày cầu lông</h3>
+            <p>Thiết kế độc đáo với nhiều màu sắc</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="category">
+            <img src="/public/images/vot-cau-long-yonex-duora-z-strike-xach-tay-1.webp" alt="Football Shoes" />
+            <h3>vợt cầu lông</h3>
+           
+            <button class="highlight">Shop Now</button>
+        </div>
+        <div class="category">
+            <img src="/public/images/ao-cau-long1.webp" alt="Accessories" />
+            <h3>Đồ Cầu lông</h3>
+            <p>Thoáng Mát <br></p>
+            <button>Shop Now<button>
+        </div>
+    </section>
 
+    <footer>
+        <p>By using this site, you agree to our <a href="#">Privacy Policy</a>
+            <button id="acceptBtn">Accept</button>
+        </p>
+    </footer>
 </body>
-<footer>
-    <p class="float-right">
-        <a href="#">Về đầu trang</a>
-    </p>
-    </div>
-</footer>
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/popperjs/popper.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-
-<script src="../assets/js/app.js"></script>
-
-</footer>
 
 </html>

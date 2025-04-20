@@ -133,7 +133,7 @@ nav a {
 }
 
 .hero {
-  background: url('football-background.jpg') no-repeat center center/cover;
+  background: url(/public/images/sport.jpg);
   color: white;
   padding: 80px 50px;
   display: flex;
