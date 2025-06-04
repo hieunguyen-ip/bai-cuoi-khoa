@@ -66,3 +66,20 @@ function removeFromCart(index) {
 if (window.location.pathname.includes("shop.html")) {
   window.onload = loadCart;
 }
+
+  let n = 100 ;
+  let tong = 0 ;
+  for (let i = 0; i <= n; i++) {
+    if ( i % 2 === 0) {
+      tong +=i ;
+                                                                                                                                                                                                                                                                                            
+    }
+  }
+    console.log(tong)
+
+  function countTrue(arr) {
+    return arr.filter( v => v === true ).lengthd;
+  }
+  console.log(countTrue([true, false, false, true, false])); 
+console.log(countTrue([false, false, false, false]));     
+console.log(countTrue([]));                                
