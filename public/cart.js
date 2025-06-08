@@ -83,3 +83,5 @@ if (window.location.pathname.includes("shop.html")) {
   console.log(countTrue([true, false, false, true, false])); 
 console.log(countTrue([false, false, false, false]));     
 console.log(countTrue([]));                                
+
+
